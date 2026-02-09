@@ -1,0 +1,28 @@
+Pseudocode
+------------------------------------------
+Start
+
+Set sum = 0
+Set max = double.negative
+Set min = double.positive
+
+For 10 grades
+    Ask user to enter a grade
+
+    While input is not a number
+        Show error message
+        Ask again
+    EndWhile
+
+    Read grade
+    Add grade to sum
+
+    If grade > max, update max
+    If grade < min, update min
+EndFor
+
+average = sum / 10
+
+Print average, max, and min
+
+End
