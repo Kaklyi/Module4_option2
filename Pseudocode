@@ -1,28 +1,48 @@
 Pseudocode
 ------------------------------------------
-Start
 
-Set sum = 0
-Set max = double.negative
-Set min = double.positive
+START
 
-For 10 grades
-    Ask user to enter a grade
+// Declare variables
+DECLARE sum = 0
+DECLARE max = NEGATIVE_INFINITY
+DECLARE min = POSITIVE_INFINITY
+DECLARE grade
+DECLARE average
 
-    While input is not a number
-        Show error message
-        Ask again
-    EndWhile
+// Loop to collect 10 grades
+FOR i FROM 1 TO 10
 
-    Read grade
-    Add grade to sum
+    DISPLAY "Enter grade #" + i
+    INPUT grade
 
-    If grade > max, update max
-    If grade < min, update min
-EndFor
+    // Validate input
+    WHILE input is not a number
+        DISPLAY "Error: please enter a valid number"
+        INPUT grade
+    END WHILE
 
-average = sum / 10
+    // Add grade to total
+    SET sum = sum + grade
 
-Print average, max, and min
+    // Update maximum grade
+    IF grade > max THEN
+        SET max = grade
+    END IF
 
-End
+    // Update minimum grade
+    IF grade < min THEN
+        SET min = grade
+    END IF
+
+END FOR
+
+// Calculate average
+SET average = sum / 10
+
+// Display results
+DISPLAY average
+DISPLAY max
+DISPLAY min
+
+END
